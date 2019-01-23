@@ -25,14 +25,13 @@ Page({
     var page = this;
     var accountId = wx.getStorageSync("accountId");
     if (accountId) {
+      console.log("getAlbum")
       wx.request({
         url: 'https://www.huwenl.cn/getAlbums',
         data: {
           accountId: wx.getStorageSync("accountId")
         },
         success(res) {
-          console.log("album.js->getAlbums")
-          console.log(res.data)
           wx.setStorageSync('album', res.data)
           if (res.data) {
             page.setData({
@@ -47,14 +46,13 @@ Page({
           title: 'Loading',
           mask: true
         })
+        console.log("getAlbum")
         wx.request({
           url: 'https://www.huwenl.cn/getAlbums',
           data: {
             accountId: wx.getStorageSync("accountId")
           },
           success(res) {
-            console.log("album.js->getAlbums")
-            console.log(res.data)
             wx.setStorageSync('album', res.data)
             if (res.data) {
               page.setData({

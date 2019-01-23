@@ -6,6 +6,7 @@ App({
     userInfo: null,
   },
   login: function(callback) {
+    console.log("login")
     wx.login({
       success: res => {
         wx.request({
