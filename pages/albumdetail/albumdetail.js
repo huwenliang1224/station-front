@@ -62,7 +62,7 @@ Page({
     wx.chooseImage({
       count: 9,
       sizeType: ['original', 'compressed'],
-      sourceType: ['album'],
+      sourceType: ['album', 'camera'],
       success(res) {
         // tempFilePath可以作为img标签的src属性显示图片
         console.log(res)
