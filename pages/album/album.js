@@ -22,28 +22,48 @@ Page({
     var page = this;
     var accountId = wx.getStorageSync("accountId");
     if (!accountId) {
-      app.login(function (accountId) {})
+      app.login(function (accountId) {
+        wx.request({
+          url: 'https://www.huwenl.cn/getAlbums',
+          data: {
+            accountId: wx.getStorageSync("accountId")
+          },
+          success(res) {
+            console.log("album.js->getAlbums")
+            console.log(res.data)
+            wx.setStorageSync('album', res.data)
+            if (res.data) {
+              page.setData({
+                album: res.data
+              })
+            }
+          }
+        })
+      })
     }
   },
   onShow: function() {
     var page = this;
 
-    wx.request({
-      url: 'https://www.huwenl.cn/getAlbums',
-      data: {
-        accountId: wx.getStorageSync("accountId")
-      },
-      success(res) {
-        console.log("album.js->getAlbums")
-        console.log(res.data)
-        wx.setStorageSync('album', res.data)
-        if (res.data) {
-          page.setData({
-            album: res.data
-          })
+    var accountId = wx.getStorageSync("accountId");
+    if (accountId) {
+      wx.request({
+        url: 'https://www.huwenl.cn/getAlbums',
+        data: {
+          accountId: wx.getStorageSync("accountId")
+        },
+        success(res) {
+          console.log("album.js->getAlbums")
+          console.log(res.data)
+          wx.setStorageSync('album', res.data)
+          if (res.data) {
+            page.setData({
+              album: res.data
+            })
+          }
         }
-      }
-    })
+      })
+    }
   },
   toAlbumDetail: function(e) {
     if (this.data.edit) {
