@@ -1,8 +1,6 @@
 //app.js
 App({
   onLaunch: function() {
-    this.login(function(accountId) {})
-  
   },
   globalData: {
     userInfo: null,

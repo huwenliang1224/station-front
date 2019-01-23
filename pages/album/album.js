@@ -19,32 +19,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var page = this;
-    var accountId = wx.getStorageSync("accountId");
-    if (!accountId) {
-      app.login(function (accountId) {
-        wx.request({
-          url: 'https://www.huwenl.cn/getAlbums',
-          data: {
-            accountId: wx.getStorageSync("accountId")
-          },
-          success(res) {
-            console.log("album.js->getAlbums")
-            console.log(res.data)
-            wx.setStorageSync('album', res.data)
-            if (res.data) {
-              page.setData({
-                album: res.data
-              })
-            }
-          }
-        })
-      })
-    }
+
   },
   onShow: function() {
     var page = this;
-
     var accountId = wx.getStorageSync("accountId");
     if (accountId) {
       wx.request({
@@ -62,6 +40,32 @@ Page({
             })
           }
         }
+      })
+    } else {
+      app.login(function(accountId) {
+        wx.showLoading({
+          title: 'Loading',
+          mask: true
+        })
+        wx.request({
+          url: 'https://www.huwenl.cn/getAlbums',
+          data: {
+            accountId: wx.getStorageSync("accountId")
+          },
+          success(res) {
+            console.log("album.js->getAlbums")
+            console.log(res.data)
+            wx.setStorageSync('album', res.data)
+            if (res.data) {
+              page.setData({
+                album: res.data
+              })
+            }
+          },
+          complete(res) {
+            wx.hideLoading()
+          }
+        })
       })
     }
   },
@@ -133,7 +137,7 @@ Page({
                 })
               }
             },
-            complete(res){
+            complete(res) {
               wx.hideLoading()
             }
           })
