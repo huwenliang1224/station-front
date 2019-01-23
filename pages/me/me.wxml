@@ -1,0 +1,16 @@
+<!--pages/me/me.wxml-->
+<view class="item">
+  <view class="title">我的账号</view>
+  <view class="detail2">{{accountId}}</view>
+</view>
+<view class="line"></view>
+<view class="item" bindtap="toAuthorization">
+  <view class="title">授权列表</view>
+  <view class="detail2">></view>
+</view>
+<view class="line"></view>
+<view class="item" bindtap="toShare">
+  <view class="title">共享的相册</view>
+  <view class="detail2">></view>
+</view>
+<view class="line"></view>

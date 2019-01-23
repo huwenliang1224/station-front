@@ -1,0 +1,19 @@
+<!--pages/friends/friends.wxml-->
+<view class="operation">
+  <view class="block"></view>
+  <view class="create" bindtap="createFriend">添加授权</view>
+</view>
+
+<block wx:for="{{friends}}" wx:key="{{item.friendUserId}}">
+  <view class="friend">
+    <view class="name">{{item.name}}</view>
+    <view class="btn" data-friendaccountid="{{item.friendAccountId}}" data-name="{{item.name}}" bindtap="delFriend">取消授权</view>
+  </view>
+</block>
+<modal class="modal" hidden="{{modalhidden}}" title="输入好友信息" confirm-text="创建" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+  <view class="content">
+    <input placeholder="好友昵称" hidden="{{modalhidden}}" bindinput="input1" value="{{inputvalue1}}" />
+    <view class="hr"></view>
+    <input placeholder="好友账号" hidden="{{modalhidden}}" bindinput="input2" value="{{inputvalue2}}" />
+  </view>
+</modal>

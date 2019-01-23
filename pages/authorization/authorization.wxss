@@ -1,0 +1,58 @@
+/* pages/friends/friends.wxss */
+.operation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #d82a0f;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  width: 50%;
+}
+
+.create {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #ffffff;
+  width: 100%;
+  font-size: 38rpx;
+  background-color: #d82a0f;
+  margin-right: 20rpx;
+}
+
+.hr {
+  height: 6rpx;
+}
+
+.friend {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  align-items: center
+}
+
+.btn {
+  width: 180rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #f7f7f7;
+  background-color: #f44336;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+  font-size: 35rpx;
+  color: #ffffff;
+}

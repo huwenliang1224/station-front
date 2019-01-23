@@ -1,0 +1,24 @@
+.hr {
+  border: 2rpx solid #f7f7f7;
+}
+
+.friend {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+
+.name {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  align-items: center
+}
+
+.btn {
+  width: 35%;
+  display: flex;
+  flex-direction: row-reverse;
+}

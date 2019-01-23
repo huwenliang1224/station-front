@@ -1,0 +1,14 @@
+<!--pages/albumdetail/albumdetail.wxml-->
+<view class="operation">
+  <view class="upload"></view>
+  <view class="upload" bindtap="upload" hidden="{{!owner}}">上传</view>
+</view>
+<view class="hr"></view>
+
+<view class="items">
+  <block wx:for="{{items}}" wx:key="*this">
+    <view class="{{(index % 4 == 3) ? 'itemright' : 'item'}}" bindtap="previewimg" data-img="{{item}}">
+      <image class="picture" src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </block>
+</view>

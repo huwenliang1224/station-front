@@ -1,0 +1,41 @@
+/* pages/albumdetail/albumdetail.wxss */
+
+.operation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #d82a0f;
+}
+
+.upload {
+  color: #ffffff;
+  width: 50%;
+  margin-right: 20rpx;
+  text-align: right;
+  font-size: 38rpx;
+}
+
+.hr {
+  height: 5rpx;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item {
+  margin-right: 10rpx;
+}
+
+.itemright {
+
+}
+
+.picture {
+  width: 180rpx;
+  height: 180rpx;
+}

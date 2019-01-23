@@ -1,0 +1,35 @@
+<!--pages/album/album.wxml-->
+<view class="operation">
+  <view class="create" hidden="{{edit}}" bindtap="create">新建相簿</view>
+  <view class="create" hidden="{{!edit}}" bindtap="deleteAlbum">删除</view>
+  <view class="edit" hidden="{{edit}}" bindtap="edit">编辑</view>
+  <view class="edit" hidden="{{!edit}}" bindtap="editcancel">取消</view>
+</view>
+<view class="hr"></view>
+
+<checkbox-group bindchange="checkboxChange">
+  <block wx:for="{{album}}" wx:key="{{item.id}}">
+    <view class="itemparent">
+      <view class="chk" hidden="{{!edit || (item.owner == 0)}}">
+        <checkbox value="{{item.id}}" checked="{{chkall}}" />
+      </view>
+      <view class="item" bindtap="toAlbumDetail" data-albumid="{{item.id}}" data-albumname="{{item.name}}" data-albumaccountid="{{item.account_id}}">
+        <view class="left">
+          <image wx:if="{{item.cover!=''}}" src="{{item.cover}}" mode="aspectFill"></image>
+        </view>
+        <view class="middle">
+          <view class="name">{{item.name}}</view>
+          <view class="count">{{item.count}}</view>
+        </view>
+        <view class="right" hidden="{{edit && (item.owner == 1)}}">
+          <image src="/images/album/arrow.png"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</checkbox-group>
+<modal class="modal" hidden="{{modalhidden}}" title="输入相簿名称" confirm-text="创建" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+  <view class="content">
+    <input placeholder="新建相簿" hidden="{{modalhidden}}" bindinput="input" value="{{inputvalue}}" />
+  </view>
+</modal>

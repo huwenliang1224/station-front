@@ -1,0 +1,10 @@
+<view class="hr"></view>
+
+<block wx:for="{{share}}" wx:key="{{item.shareAccountId}}">
+  <view class="friend">
+    <view class="name">{{item.shareAccountId}}</view>
+    <view class="btn">
+      <switch data-shareaccountid="{{item.shareAccountId}}" data-myaccountid="{{item.myAccountId}}" checked="{{item.status == 1}}" bindchange="switch2Change" />
+    </view>
+  </view>
+</block>
