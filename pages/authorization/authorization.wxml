@@ -1,6 +1,6 @@
 <!--pages/friends/friends.wxml-->
 <view class="operation">
-  <view class="instruction" bindtap="instruct">使用说明</view>
+  <view class="instruction"></view>
   <view class="create" bindtap="createFriend">添加授权</view>
 </view>
 

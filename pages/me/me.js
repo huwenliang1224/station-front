@@ -91,5 +91,10 @@ Page({
     wx.navigateTo({
       url: '/pages/instruction/instruction'
     })
+  },
+  toGuide: function (e) {
+    wx.navigateTo({
+      url: '/pages/guide/guide'
+    })
   }
 })

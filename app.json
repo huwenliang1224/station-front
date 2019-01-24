@@ -4,7 +4,8 @@
     "pages/me/me",
     "pages/albumdetail/albumdetail",
     "pages/authorization/authorization",
-    "pages/share/share"
+    "pages/share/share",
+    "pages/guide/guide"
   ],
   "window": {
     "backgroundTextStyle": "light",

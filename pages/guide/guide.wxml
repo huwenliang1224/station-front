@@ -1,0 +1,15 @@
+<!--pages/guide/guide.wxml-->
+<view class="content">
+  <text class="title">【照片】</text>
+  <text class="section">该页面功能有：新建相簿、显示相簿、编辑相簿、删除相簿、跳转到相簿详情页。如果您已经获得了好友的授权，并且在【共享的相册】里打开了该好友相簿显示的开关，您也可以看到该好友的相簿。显示相簿时，如果您已经获得了好友的授权，并且在【共享的相册】里打开了该好友相簿显示的开关，您也可以看到该好友的相簿。删除相簿时，您只可以删除您自己的相簿。</text>
+  <view class="hr"></view>
+  <text class="title">【照片详情页】</text>
+  <text class="section">该页面功能有：显示相簿详情、上传照片到相簿、预览照片。您只可以在自己的相簿中上传照片。</text>
+  <view class="hr"></view>
+  <text class="title">【授权列表】</text>
+  <text class="section">点击右上角的【添加授权】后，输入好友的昵称和好友的账号(在好友的【我的】->【我的账号】页面获取)对好友进行授权，授权后该好友可以看到您的相簿。可以点击好友右侧的【取消授权】来撤销授权，撤销后该好友将无法看到您的相簿。</text>
+  <view class="hr"></view>
+  <text class="title">【共享的相册】</text>
+  <text class="section">本页列出了所有给您授权的用户的列表，右侧的开关表示是否在照片页面显示该用户的相簿，默认是不显示，如需要显示，可打开开关后即可，如不需要显示，可关闭开关即可。</text>
+  <view class="hr"></view>
+</view>

@@ -14,3 +14,8 @@
   <view class="detail2">></view>
 </view>
 <view class="line"></view>
+<view class="item" bindtap="toGuide">
+  <view class="title">用户手册</view>
+  <view class="detail2">></view>
+</view>
+<view class="line"></view>

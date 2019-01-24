@@ -1,5 +1,5 @@
 <view class="operation">
-  <view class="instruction" bindtap="instruct">使用说明</view>
+  <view class="instruction" bindtap="instruct"></view>
   <view class="block"></view>
 </view>
 

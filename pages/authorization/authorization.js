@@ -193,12 +193,5 @@ Page({
     this.setData({
       inputvalue2: e.detail.value
     })
-  },
-  instruct: function(e) {
-    wx.showModal({
-      title: '使用说明',
-      content: '点击右上角的【添加授权】后，输入好友的昵称和好友的账号(在好友的【我的】->【我的账号】页面获取)对好友进行授权，授权后该好友可以看到您的相簿。可以点击好友右侧的【取消授权】来撤销授权，撤销后该好友将无法看到您的相簿',
-      showCancel: false
-    })
   }
 })
