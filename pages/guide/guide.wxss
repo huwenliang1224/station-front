@@ -21,10 +21,12 @@ page {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-family:microsoft yahei;
 }
 
 .section {
   margin-left: 30rpx;
   margin-right: 20rpx;
   font-size: 35rpx;
+  font-family:microsoft yahei;
 }
