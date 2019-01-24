@@ -1,27 +1,7 @@
-.operation {
-  display: flex;
-  flex-direction: row;
+page {
   width: 100%;
-  background-color: #d82a0f;
-}
-
-.instruction {
-  display: flex;
-  flex-direction: row;
-  color: #ffffff;
-  width: 50%;
-  font-size: 38rpx;
-  margin-left: 20rpx;
-}
-
-.block {
-  display: flex;
-  flex-direction: row-reverse;
-  color: #ffffff;
-  width: 50%;
-  font-size: 38rpx;
-  background-color: #d82a0f;
-  margin-right: 20rpx;
+  height: 100%;
+  background-color: #f7f7f7;
 }
 
 .hr {

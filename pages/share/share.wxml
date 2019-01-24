@@ -1,11 +1,5 @@
-<view class="operation">
-  <view class="instruction" bindtap="instruct"></view>
-  <view class="block"></view>
+<view class="hr">
 </view>
-
-
-<view class="hr"></view>
-
 <block wx:for="{{share}}" wx:key="{{item.shareAccountId}}">
   <view class="friend">
     <view class="name">{{item.shareAccountId}}</view>
