@@ -4,7 +4,6 @@
   <view class="upload" bindtap="upload" hidden="{{!owner}}">上传</view>
 </view>
 <view class="hr"></view>
-
 <view class="items">
   <block wx:for="{{items}}" wx:key="*this">
     <view class="{{(index % 4 == 3) ? 'itemright' : 'item'}}" bindtap="previewimg" data-img="{{item}}">
