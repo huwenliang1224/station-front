@@ -1,3 +1,29 @@
+.operation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #d82a0f;
+}
+
+.instruction {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  width: 50%;
+  font-size: 38rpx;
+  margin-left: 20rpx;
+}
+
+.block {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #ffffff;
+  width: 50%;
+  font-size: 38rpx;
+  background-color: #d82a0f;
+  margin-right: 20rpx;
+}
+
 .hr {
   border: 2rpx solid #f7f7f7;
 }
@@ -14,7 +40,7 @@
   display: flex;
   flex-direction: row;
   margin-left: 20rpx;
-  align-items: center
+  align-items: center;
 }
 
 .btn {

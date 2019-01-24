@@ -6,18 +6,20 @@
   background-color: #d82a0f;
 }
 
-.block {
+.instruction {
   display: flex;
   flex-direction: row;
   color: #ffffff;
   width: 50%;
+  font-size: 38rpx;
+  margin-left: 20rpx;
 }
 
 .create {
   display: flex;
   flex-direction: row-reverse;
   color: #ffffff;
-  width: 100%;
+  width: 50%;
   font-size: 38rpx;
   background-color: #d82a0f;
   margin-right: 20rpx;
