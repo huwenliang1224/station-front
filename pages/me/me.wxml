@@ -2,6 +2,7 @@
 <view class="item">
   <view class="title">我的账号</view>
   <view class="detail2">{{accountId}}</view>
+  <view class="btn" data-accountid="{{accountId}}" bindtap="copy">复制到粘贴板</view>
 </view>
 <view class="line"></view>
 <view class="item" bindtap="toAuthorization">

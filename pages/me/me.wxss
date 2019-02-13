@@ -3,6 +3,7 @@
   height: 110rpx;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .title {
@@ -27,4 +28,19 @@
 .line {
   border: 2rpx solid #ccc;
   opacity: 0.2;
+}
+
+.btn {
+  width: 360rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx solid #f7f7f7;
+  background-color: #d82a0f;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+  font-size: 35rpx;
+  color: #ffffff;
 }

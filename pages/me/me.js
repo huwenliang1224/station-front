@@ -16,6 +16,10 @@ Page({
   onLoad: function(options) {
     var page = this;
     var accountId = wx.getStorageSync("accountId");
+    if (accountId && accountId.length > 10) {
+      accountId = null;
+    }
+
     if (!accountId) {
       app.login(function(accountId) {
         page.setData({
@@ -95,6 +99,12 @@ Page({
   toGuide: function (e) {
     wx.navigateTo({
       url: '/pages/guide/guide'
+    })
+  },
+  copy: function (e) {
+    var accountid = e.currentTarget.dataset.accountid;
+    wx.setClipboardData({
+      data: accountid
     })
   }
 })
