@@ -24,9 +24,6 @@ Page({
   onShow: function() {
     var page = this;
     var accountId = wx.getStorageSync("accountId");
-    if (accountId && accountId.length > 10){
-      accountId = null;
-    }
 
     if (accountId) {
       console.log("getAlbum")

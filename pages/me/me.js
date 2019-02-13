@@ -16,9 +16,6 @@ Page({
   onLoad: function(options) {
     var page = this;
     var accountId = wx.getStorageSync("accountId");
-    if (accountId && accountId.length > 10) {
-      accountId = null;
-    }
 
     if (!accountId) {
       app.login(function(accountId) {
