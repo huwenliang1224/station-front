@@ -161,6 +161,15 @@ Page({
       this.setData({
         inputvalue: "新建相簿"
       })
+    }else{
+      if (page.data.inputvalue.length > 20) {
+        wx.showToast({
+          title: '相簿名称长度不能超过20个字符',
+          icon: 'none',
+          duration: 3000
+        })
+        return;
+      }
     }
 
     wx.request({

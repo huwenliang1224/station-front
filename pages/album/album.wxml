@@ -20,6 +20,7 @@
         <view class="middle">
           <view class="name">{{item.name}}</view>
           <view class="count">{{item.count}}</view>
+          <view class="count">{{item.account_id}}</view>
         </view>
         <view class="right" hidden="{{edit && (item.owner == 1)}}">
           <image src="/images/album/arrow.png"></image>
