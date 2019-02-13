@@ -98,6 +98,11 @@ Page({
       url: '/pages/guide/guide'
     })
   },
+  toSuggest: function (e) {
+    wx.navigateTo({
+      url: '/pages/suggest/suggest'
+    })
+  },
   copy: function (e) {
     var accountid = e.currentTarget.dataset.accountid;
     wx.setClipboardData({

@@ -20,3 +20,8 @@
   <view class="detail2">></view>
 </view>
 <view class="line"></view>
+<view class="item" bindtap="toSuggest">
+  <view class="title">您的建议</view>
+  <view class="detail2">></view>
+</view>
+<view class="line"></view>

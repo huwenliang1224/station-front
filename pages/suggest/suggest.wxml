@@ -1,0 +1,5 @@
+<view class="page-section-title">感谢您在下方的输入框内提出宝贵的建议，让作者不断优化、进步！</view>
+<form bindsubmit="bindFormSubmit">
+  <textarea name="textarea" maxlength="255" value="{{content}}"/>
+  <button form-type="submit">提交</button>
+</form>
